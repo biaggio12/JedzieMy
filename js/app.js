@@ -9,15 +9,15 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
             fullName : 'Blazej Szmit',
             defaultPos : 'miejscowość pod krakowem',
             defaultDestinationPos: 'Mordor, Kraków',
-            rate: '5'
+            status : 'Student'
         },
         {
             fullName : 'Jan Kowalski',
             defaultPos : 'Wadowice',
             defaultDestinationPos: 'UJ, Kraków',
-            rate: '5'
+            status : 'student'
         }
-    ]
+    ];
     $scope.menu = [
         {
             link : '',
@@ -38,8 +38,8 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
     $scope.admin = [
         {
             link : '',
-            title: 'Trash',
-            icon: 'delete'
+            title: 'My Profile',
+            icon: 'account_circle'
         },
         {
             link : 'showListBottomSheet($event)',

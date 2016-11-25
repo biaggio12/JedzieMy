@@ -65,7 +65,7 @@
         </div>
         <md-tabs md-stretch-tabs class="md-primary" md-selected="data.selectedIndex">
             <md-tab id="tab1" aria-controls="tab1-content">
-                My Connections
+                My trips
             </md-tab>
             <md-tab id="tab2" aria-controls="tab2-content">
                 Last Companions
@@ -85,7 +85,7 @@
             </h3>
             <md-input-container md-theme="input" flex>
                 <label>&nbsp;</label>
-                <input ng-model="search.who" placeholder="enter search">
+                <input ng-model="search" placeholder="enter search">
             </md-input-container>
             <md-button aria-label="Search" ng-click="showSearch = !showSearch">
                 <ng-md-icon icon="search"></ng-md-icon>
@@ -107,11 +107,11 @@
                      md-swipe-left="next()"
                      md-swipe-right="previous()"
                      layout="row" layout-align="center center">
-                    <md-card flex flex-wrap>
+                    <md-card flex flex-wrap class="color-change">
                         <h1 style="text-align: center">Last rides</h1>
                         <md-card-content layout="row">
 
-                            <md-card md-theme="{{ showDarkTheme ? 'default' : 'default' }}" md-theme-watch ng-repeat="item in activity | filter:search" flex="33">
+                            <md-card ng-repeat="item in activity | filter:search" flex="33">
                                 <md-card-title>
                                     <md-card-title-text>
                                         <span class="md-headline">{{item.destination}}</span>
@@ -143,33 +143,42 @@
                      md-swipe-left="next()"
                      md-swipe-right="previous()"
                      layout="row" layout-align="center center">
-                    <md-card flex-gt-sm="90" flex-gt-md="80">
+                    <md-card flex flex-wrap class="color-change">
                         <md-card-content>
                             <h2>Last Companions</h2>
-                            <md-list>
-                                <md-item ng-repeat="item in activity | filter:search | orderBy:'-what'">
-                                    <md-item-content>
-                                        <div class="md-tile-left inset" hide-sm>
+                            <md-card ng-repeat="user in users | filter:search" flex="20">
+                                <md-card-title>
+                                    <md-card-title-text>
+                                        <span class="md-headline">{{user.fullName}}</span>
+                                        <span class="md-subhead">{{user.defaultPos}}</span>
+                                        <span class="md-subhead">{{user.defaultDestinationPos}}</span>
+                                    </md-card-title-text>
+                                    <md-card-title-media>
+                                        <div class="md-media-lg card-media" layout-align="end center">
                                             <user-avatar></user-avatar>
                                         </div>
-                                        <div class="md-tile-content">
-                                            <h3>{{item.what}}</h3>
-                                            <h4>{{item.who}}</h4>
-                                            <p>
-                                                {{item.notes}}
-                                            </p>
-                                        </div>
-                                    </md-item-content>
-                                    <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
-                                    <md-divider hide-gt-sm ng-if="!$last"></md-divider>
-                                </md-item>
-                                <md-divider></md-divider>
-                                <md-item layout class="inset">
-                                    <md-button layout layout-align="start center" flex class="md-primary">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg> More
-                                    </md-button>
-                                </md-item>
-                            </md-list>
+                                    </md-card-title-media>
+                                </md-card-title>
+                                <md-card-content>
+                                    {{item.notes}}
+                                </md-card-content>
+                                <md-card-actions layout="row" layout-align="end center">
+                                    <md-button>More Information</md-button>
+                                </md-card-actions>
+                            </md-card>
+                        </md-card-content>
+                    </md-card>
+                </div>
+                <div role="tabpanel"
+                     id="tab3-content"
+                     aria-labelledby="tab3"
+                     ng-switch-when="2"
+                     md-swipe-left="next()"
+                     md-swipe-right="previous()"
+                     layout="row" layout-align="center center">
+                    <md-card>
+                        <md-card-content>
+                            <md-card-title></md-card-title>
                         </md-card-content>
                     </md-card>
                 </div>
