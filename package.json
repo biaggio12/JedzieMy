@@ -1,0 +1,22 @@
+{
+  "name": "jedziemy_app",
+  "version": "1.0.0",
+  "description": "Jedziemy Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biaggio12/jedzieMy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biaggio12/jedzieMy/issues"
+  },
+  "homepage": "https://github.com/biaggio12/jedzieMy#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
