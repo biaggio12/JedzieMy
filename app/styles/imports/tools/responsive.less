@@ -1,0 +1,69 @@
+@phone-size-xxs: 350px;
+@phone-size-xxs-plus: 365px;
+@phone-size-xs: 380px;
+@phone-size-s: 420px;
+@phone-size: 500px;
+@smart-size-s: 660px;
+@smart-size: 768px;
+@archaic-size:  992px;
+@large-size:  1006px;
+@very-large-size: 1100px;
+@tablet-size: 1200px;
+@desktop-small-size: 1266px;
+@desktop-medium-size: 1280px;
+
+@phone-xxs: ~"screen and (max-width: "(@phone-size-xxs - 1) ~")";
+@phone-xxs-up: ~"screen and (min-width: @{phone-size-xxs})";
+
+@phone-xxs-plus: ~"screen and (max-width: "(@phone-size-xxs-plus - 1) ~")";
+@phone-xxs-plus-up: ~"screen and (min-width: @{phone-size-xxs-plus})";
+
+@phone-xs: ~"screen and (max-width: "(@phone-size-xs - 1) ~")";
+@phone-xs-up: ~"screen and (min-width: @{phone-size-xs})";
+
+@phone-s: ~"screen and (max-width: "(@phone-size-s - 1) ~")";
+@phone-s-up: ~"screen and (min-width: @{phone-size-s})";
+
+@phone: ~"screen and (max-width: "(@phone-size - 1) ~")";
+@phone-up: ~"screen and (min-width: @{phone-size})";
+
+@smart-s: ~"screen and (max-width: "(@smart-size-s - 1) ~")";
+@smart-s-up: ~"screen and (min-width: @{smart-size-s})";
+
+@smart: ~"screen and (max-width: "(@smart-size - 1) ~")";
+@smart-up: ~"screen and (min-width: @{smart-size})";
+
+@large: ~"screen and (max-width: "(@large-size - 1) ~")";
+@large-up: ~"screen and (min-width: @{large-size})";
+
+@very-large: ~"screen and (max-width: "(@very-large-size - 1) ~")";
+@very-large-up: ~"screen and (min-width: @{very-large-size})";
+
+@archaic: ~"screen and (max-width: "(@archaic-size - 1) ~")";
+@archaic-up: ~"screen and (min-width: @{archaic-size})";
+
+@tablet: ~"screen and (max-width:"(@tablet-size - 1) ~")";
+@tablet-up: ~"screen and (min-width: @{tablet-size})";
+
+@desktop-small: ~"screen and (max-width:"(@desktop-small-size - 1) ~")";
+@desktop-small-up: ~"screen and (min-width: @{desktop-small-size})";
+
+@desktop-medium: ~"screen and (max-width:"(@desktop-medium-size - 1) ~")";
+@desktop-medium-up: ~"screen and (min-width: @{desktop-medium-size})";
+
+@landscape: ~"screen and (orientation: landscape)";
+@portrait: ~"screen and (orientation: landscape)";
+@1444up: ~"screen and (min-width: 1440px)";
+@1444: ~"screen and (max-width: 1439px)";
+@fullhdup: ~"screen and (min-width: 1920px)";
+
+
+.test{
+//	@media @phone{
+//		background: red;
+//	}
+}
+
+@tablet-margin: 18px;
+@smart-margin: 15px;
+@phone-margin: 10px;
