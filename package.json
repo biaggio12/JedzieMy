@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/biaggio12/jedzieMy#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2"
   }
 }
